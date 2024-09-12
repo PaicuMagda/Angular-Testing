@@ -1,0 +1,4 @@
+<form [formGroup]="formGroup">
+  <input type="text" formControlName="name" />
+  <button (click)="sendName(this.formGroup.get('name')?.value)">Send</button>
+</form>
