@@ -1,0 +1,10 @@
+<div *ngIf="vehicles$ | async as vehicles">
+  <!-- async se aboneaza automat la observable  -->
+  <!-- as vehicles este folosit pentru a salva valoarea vehicles ca o variabila locala care reprezinta raspunsul observabilului -->
+  <h2 *ngFor="let vehicle of vehicles">{{ vehicle | json }}</h2>
+</div>
+
+<button (click)="goToDetails()">Go To details</button>
+<button (click)="goToEdit()">Go to edit</button>
+
+<app-edit [componentName]="componentName"></app-edit>
